@@ -29,8 +29,13 @@ let weather = {
         this.fetchWeather(document.querySelector(".search-bar").value);
     },
 };
-document.querySelector(".search button").addEventListener("click",()=>{weather.search();})
-document.querySelector(".search-bar").addEventListener("keyup",function (event){if(event.key=="Enter"){
+
+document.querySelector(".search button").addEventListener("click",()=>{
     weather.search();
-}})
+})
+document.querySelector(".search-bar").addEventListener("keyup",function (event){
+    if(event.key=="Enter"){
+        weather.search();
+    }
+})
 weather.fetchWeather("Raipur");
